@@ -23,8 +23,8 @@ public class ClienteController {
 	@RequestMapping(value="/cadastrarCliente", method=RequestMethod.POST)
 	public String form(Cliente evento) {
 		
-		er.save(evento);
-		
+//		er.save(evento);
+		System.out.println(er);
 		return "redirect:/cadastrarCliente";
 	}
 }

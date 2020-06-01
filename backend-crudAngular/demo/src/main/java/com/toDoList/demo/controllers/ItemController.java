@@ -19,10 +19,13 @@ public class ItemController {
     @PostMapping(path = "/Item")
     public String newItem (Item item){
         itemRepository.save(item);
+        System.out.println(item.getMateria());
+        System.out.println(item.getTarefa());
+        System.out.println(item.getDtEntrega());
         return "Novo Item inserido";
     }
     //Deletando Item
-    @DeleteMapping(path = "/Item")
+    @DeleteMapping(path = "/Item/{id}")
     public String deletandoITem(@PathVariable int id){
         itemRepository.deleteById(id);
         return "Deletado com Sucesso.";

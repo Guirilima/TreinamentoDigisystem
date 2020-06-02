@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.Date;
+import java.sql.Date;
 
 @Entity //Essa classe será uma Entidade no meu BD
 public class Item {
@@ -14,7 +14,7 @@ public class Item {
     private int id;
     private String materia;
     private String tarefa;
-    private Date dtEntrega;
+    private String dtEntrega;
     private boolean status;
 
     public int getId() {
@@ -41,11 +41,11 @@ public class Item {
         this.tarefa = tarefa;
     }
 
-    public Date getDtEntrega() {
+    public String getDtEntrega() {
         return dtEntrega;
     }
 
-    public void setDtEntrega(Date dtEntrega) {
+    public void setDtEntrega(String  dtEntrega) {
         this.dtEntrega = dtEntrega;
     }
 

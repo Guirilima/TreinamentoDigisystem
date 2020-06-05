@@ -4,19 +4,20 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.sql.Date;
 
-@Entity //Essa classe será uma Entidade no meu BD
+@Entity //SINALIZANDO QUE SERÁ NO ENTIDADE BD
 public class Item {
 
-    @Id //Obrigatorio
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //Gerador de ID's
+    @Id //SINALIZANDO QUE SERÁ NO ID NO BD
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //GERANDO AUTOMATICAMENTE ID's
+
     private int id;
     private String materia;
     private String tarefa;
     private String dtEntrega;
     private boolean status;
 
+//    GETTERS / SETTERS
     public int getId() {
         return id;
     }
@@ -49,7 +50,7 @@ public class Item {
         this.dtEntrega = dtEntrega;
     }
 
-    public boolean isStatus() {
+    public boolean getStatus() {
         return status;
     }
 

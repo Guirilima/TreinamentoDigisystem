@@ -11,5 +11,4 @@ public interface ItemRepository extends CrudRepository<Item, Integer> {
     //Criando buscador por materia
     Optional<List<Item>> findByMateria(String materia);
 
-//    void delete(int id);
 }
